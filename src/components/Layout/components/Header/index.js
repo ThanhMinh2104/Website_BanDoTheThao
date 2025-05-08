@@ -4,11 +4,13 @@ import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faMagnifyingGlass, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import LoginModal from "~/components/Form/LoginModal";
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [showOverlay, setShowOverlay] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
 
     return (
         <header className={cx("wrapper")}>
@@ -23,7 +25,11 @@ function Header() {
                         icon={faMagnifyingGlass}
                         onClick={() => setShowOverlay(true)}
                     />
-                    <FontAwesomeIcon className={cx("action-icon")} icon={faUser} />
+                    <FontAwesomeIcon
+                        className={cx("action-icon")}
+                        icon={faUser}
+                        onClick={() => setShowLoginModal(true)}
+                    />
                     <div className={cx("cart")}>
                         <span className={cx("cart-total")}>0đ</span>
                         <FontAwesomeIcon className={cx("cart-icon")} icon={faCartShopping} />
@@ -43,6 +49,9 @@ function Header() {
                     </div>
                 </>
             )}
+
+            {/* Modal Login & Logout */}
+            <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
         </header>
     );
 }
