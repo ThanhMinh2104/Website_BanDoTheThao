@@ -31,6 +31,9 @@ const images = {
     mancity10: require("~/assests/images/Shirt/mancity/ao10.jpg"),
     mancity11: require("~/assests/images/Shirt/mancity/ao11.jpg"),
     mancity12: require("~/assests/images/Shirt/mancity/ao12.jpg"),
+
+    vnSizeChart: require("~/assests/images/logos/vnSizeChart.png"),
+    thSizeChart: require("~/assests/images/logos/thSizeChart.png"),
 };
 
 export default images;
