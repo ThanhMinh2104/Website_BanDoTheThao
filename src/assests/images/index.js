@@ -1,5 +1,23 @@
 const images = {
     logo: require("~/assests/images/logo.svg").default,
+    arsenal: require("~/assests/images/logos/arsenal.png"),
+    chelsea: require("~/assests/images/logos/chelsea.png"),
+    liverpool: require("~/assests/images/logos/liverpool.png"),
+    mancity: require("~/assests/images/logos/manchestercity.png"),
+    manutd: require("~/assests/images/logos/manchesterunited.png"),
+    tottenham: require("~/assests/images/logos/tottenham.png"),
+    atletico: require("~/assests/images/logos/atleticomadrid.png"),
+    barcelona: require("~/assests/images/logos/barcelona.png"),
+    realmadrid: require("~/assests/images/logos/realmadrid.png"),
+    bayern: require("~/assests/images/logos/bayernmunich.png"),
+    dortmund: require("~/assests/images/logos/dortmund.png"),
+    acmilan: require("~/assests/images/logos/acmilan.png"),
+    roma: require("~/assests/images/logos/asroma.png"),
+    intermilan: require("~/assests/images/logos/intermilan.png"),
+    juventus: require("~/assests/images/logos/juventus.png"),
+    psg: require("~/assests/images/logos/psg.png"),
+    mls: require("~/assests/images/logos/MLS.png"),
+    spl: require("~/assests/images/logos/SPL.png"),
 };
 
 export default images;
