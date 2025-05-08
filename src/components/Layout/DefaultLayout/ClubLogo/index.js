@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./ClubLogo.module.scss";
 import classNames from "classnames/bind";
 import images from "~/assests/images";  
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -40,11 +41,12 @@ function ClubLogo() {
 
       <div className={cx("grid")}>
         {clubs.map((club) => (
-          <div
+          <Link to= "/shirts"
             key={club.id}
             className={cx("item", { hover: hoverClub === club.id })}
             onMouseEnter={() => setHoverClub(club.id)}
             onMouseLeave={() => setHoverClub(null)}>
+              
             <div className={cx("imageContainer")}>
               <img
                 src={club.logo}
@@ -56,7 +58,7 @@ function ClubLogo() {
                 }}
               />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       </div>
