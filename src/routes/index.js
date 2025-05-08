@@ -1,14 +1,33 @@
 import { HeaderOnly } from "~/components/Layout";
-import Search from "~/pages/Search";
-import Upload from "~/pages/Upload";
-const { default: Following } = require("~/pages/Following");
+import Cart from "~/pages/Cart";
+import NewsDetail from "~/pages/NewsDetail";
+import ShirtDetail from "~/pages/ShirtDetail";
+import Shirts from "~/pages/Shirts";
+import Sport from "~/pages/Sport";
 const { default: Home } = require("~/pages/Home");
 
 const publicRoutes = [
     { path: "/", component: Home },
-    { path: "/following", component: Following },
-    { path: "/upload", component: Upload, layout: HeaderOnly },
-    { path: "/search", component: Search, layout: null },
+    {
+        path: "/cart",
+        component: Cart,
+    },
+    {
+        path: "/newsdetail",
+        component: NewsDetail,
+    },
+    {
+        path: "/shirtdetail",
+        component: ShirtDetail,
+    },
+    {
+        path: "/shirts",
+        component: Shirts,
+    },
+    {
+        path: "/sport",
+        component: Sport,
+    },
 ];
 
 export { publicRoutes };
