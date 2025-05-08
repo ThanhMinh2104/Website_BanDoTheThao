@@ -1,5 +1,5 @@
 const images = {
-    logo: require("~/assests/images/logo.svg").default,
+    logo: require("~/assests/images//hiequego.png"),
 };
 
 export default images;

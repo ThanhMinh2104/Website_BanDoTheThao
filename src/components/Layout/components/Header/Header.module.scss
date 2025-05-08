@@ -7,6 +7,56 @@
 }
 
 .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
     height: 100%;
-    width: 1150px;
+    width: 100%;
+}
+
+.logo {
+    margin-left: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 200px;
+    height: 60px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    color: var(--grey--color);
+}
+
+.cart {
+    margin-top: 8px;
+    color: gray;
+}
+
+.cart-total {
+}
+
+.action-icon {
+    padding: 8px;
+    border-radius: 999px;
+    border: 1px solid;
+    cursor: pointer;
+    &:hover {
+        color: var(--primary--color);
+    }
+}
+
+.cart-icon {
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--primary--color);
+    }
 }
