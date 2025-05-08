@@ -59,6 +59,47 @@ function Header() {
                 </div>
             </div>
 
+            {/* Navigation Bar */}
+            <nav className={cx("nav-bar")}>
+                <ul className={cx("nav-list")}>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ THÁI LAN
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            ÁO ĐỘI TUYỂN
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ CLB
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ KHÔNG LOGO
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            BÓNG ĐÁ
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            GYM
+                        </a>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <a href="#" className={cx("nav-link")}>
+                            YOGA
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             {/* Overlay và nội dung */}
             {showOverlay && (
                 <>
