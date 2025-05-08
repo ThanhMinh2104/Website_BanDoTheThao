@@ -18,6 +18,19 @@ const images = {
     psg: require("~/assests/images/logos/psg.png"),
     mls: require("~/assests/images/logos/MLS.png"),
     spl: require("~/assests/images/logos/SPL.png"),
+
+    mancity1: require("~/assests/images/Shirt/mancity/ao1.jpg"),
+    mancity2: require("~/assests/images/Shirt/mancity/ao2.jpg"),
+    mancity3: require("~/assests/images/Shirt/mancity/ao3.jpg"),
+    mancity4: require("~/assests/images/Shirt/mancity/ao4.jpg"),
+    mancity5: require("~/assests/images/Shirt/mancity/ao5.jpg"),
+    mancity6: require("~/assests/images/Shirt/mancity/ao6.jpg"),
+    mancity7: require("~/assests/images/Shirt/mancity/ao7.jpg"),
+    mancity8: require("~/assests/images/Shirt/mancity/ao8.jpg"),
+    mancity9: require("~/assests/images/Shirt/mancity/ao9.jpg"),
+    mancity10: require("~/assests/images/Shirt/mancity/ao10.jpg"),
+    mancity11: require("~/assests/images/Shirt/mancity/ao11.jpg"),
+    mancity12: require("~/assests/images/Shirt/mancity/ao12.jpg"),
 };
 
 export default images;

@@ -1,0 +1,130 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 30%;
+}
+
+.shirt-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.shirt-image {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .shirt-details {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        .shirt-name {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            color: #fff;
+            text-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.5);
+        }
+        .price-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+            .original-price {
+                font-size: 16px;
+                color: #ccc;
+                text-decoration: line-through;
+                text-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.5);
+            }
+            .discounted-price {
+                font-size: 16px;
+                color: #ffffff;
+                font-weight: bold;
+                text-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+.btn-cart-view {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    padding: 10px;
+    background-color: #fdfdfd;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+}
+
+.add-to-cart-icon {
+    width: 48%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.quick-view-btn {
+    width: 48%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.add-to-cart-icon {
+    background-color: #f3f3f3;
+    color: #333;
+
+    &:hover {
+        background-color: var(--primary--color);
+        color: #f3f3f3;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.quick-view-btn {
+    background-color: #f3f3f3;
+    color: #333;
+
+    &:hover {
+        background-color: var(--primary--color);
+        color: #f3f3f3;
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
