@@ -1,0 +1,43 @@
+.wrapper {
+    padding: 0px 12px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: black;
+}
+
+.icon {
+    color: white;
+    padding: 0px 4px;
+    width: 12px;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(210, 206, 206);
+    }
+}
+
+.box {
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: 101%;
+        left: 45%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
