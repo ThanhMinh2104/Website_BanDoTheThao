@@ -2,6 +2,7 @@ import styles from "./Shirts.module.scss";
 import classNames from "classnames/bind";
 import ShirtItem from "~/components/Layout/components/ShirtItem";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 const cx = classNames.bind(styles);
 
@@ -55,6 +56,8 @@ function Shirts() {
             <div className={cx("grid")}>
                 {mancity.map((item) => (
 =======
+=======
+>>>>>>> Stashed changes
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -63,7 +66,7 @@ const cx = classNames.bind(styles);
 function Shirts() {
     const { clubId } = useParams();
     const [shirts, setShirts] = useState([]);
-
+    
     useEffect(() => {
         fetch("http://localhost:3001/shirts")
             .then((response) => response.json())
@@ -91,6 +94,9 @@ function Shirts() {
         <div className={cx("wrapper")}>
             <div className={cx("grid")}>
                 {shirts.map((item) => (
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                     <ShirtItem
                         key={item.id}
