@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Cart.module.scss";
-import CartTableItem from "~/components/CartTableItem";
-import CartSummary from "~/components/CartSummary";
+import CartTableItem from "~/components/CartTableItem/CartTableItem";
+import CartSummary from "~/components/CartSummary/CartSummary";
 
 const cx = classNames.bind(styles);
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
+    console.log(cartItems);
 
     useEffect(() => {
         fetch("http://localhost:3001/carts")
@@ -24,6 +25,8 @@ function Cart() {
             prev.map((item) => (item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item)),
         );
     };
+
+    console.log(cartItems);
 
     const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 

@@ -124,21 +124,6 @@ function Header() {
                             ÁO BÓNG ĐÁ KHÔNG LOGO
                         </Link>
                     </li>
-                    <li className={cx("nav-item")}>
-                        <Link to="/products/bongda" className={cx("nav-link")}>
-                            BÓNG ĐÁ
-                        </Link>
-                    </li>
-                    <li className={cx("nav-item")}>
-                        <Link to="/products/gym" className={cx("nav-link")}>
-                            GYM
-                        </Link>
-                    </li>
-                    <li className={cx("nav-item")}>
-                        <Link to="/products/yoga" className={cx("nav-link")}>
-                            YOGA
-                        </Link>
-                    </li>
                 </ul>
             </nav>
 
