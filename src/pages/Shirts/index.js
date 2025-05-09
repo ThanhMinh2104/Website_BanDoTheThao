@@ -1,7 +1,3 @@
-import styles from "./Shirts.module.scss";
-import classNames from "classnames/bind";
-import ShirtItem from "~/components/Layout/components/ShirtItem";
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
@@ -13,7 +9,7 @@ const cx = classNames.bind(styles);
 function Shirts() {
     const { clubId } = useParams();
     const [shirts, setShirts] = useState([]);
-    
+
     useEffect(() => {
         fetch("http://localhost:3001/shirts")
             .then((response) => response.json())
