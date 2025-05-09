@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
-    console.log(cartItems);
 
     useEffect(() => {
         fetch("http://localhost:3001/carts")
@@ -16,17 +15,44 @@ function Cart() {
             .then((data) => setCartItems(data));
     }, []);
 
+    const updateCartItem = async (id, newQuantity) => {
+        try {
+            const item = cartItems.find((item) => item.id === id);
+            if (!item || newQuantity < 1) return;
+
+            const response = await fetch(`http://localhost:3001/carts/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ ...item, quantity: newQuantity }),
+            });
+
+            if (response.ok) {
+                const updatedItem = await response.json();
+                setCartItems((prevItems) => prevItems.map((i) => (i.id === id ? updatedItem : i)));
+            } else {
+                console.error("Failed to update quantity");
+            }
+        } catch (error) {
+            console.error("Error updating quantity:", error);
+        }
+    };
+
+    // Fuction Logic
     const handleIncrease = (id) => {
-        setCartItems((prev) => prev.map((item) => (item.id === id ? { ...item, quantity: item.quantity + 1 } : item)));
+        const item = cartItems.find((item) => item.id === id);
+        if (item) {
+            updateCartItem(id, item.quantity + 1);
+        }
     };
 
     const handleDecrease = (id) => {
-        setCartItems((prev) =>
-            prev.map((item) => (item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item)),
-        );
+        const item = cartItems.find((item) => item.id === id);
+        if (item && item.quantity > 1) {
+            updateCartItem(id, item.quantity - 1);
+        }
     };
-
-    console.log(cartItems);
 
     const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
@@ -53,7 +79,7 @@ function Cart() {
                     ))}
                 </tbody>
             </table>
-            <CartSummary total={total} />
+            <CartSummary total={total} cartItems={cartItems} onClearCart={() => setCartItems([])} />
         </div>
     );
 }
