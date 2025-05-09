@@ -1,0 +1,53 @@
+.cart-row {
+    .product-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+        }
+    }
+
+    .price,
+    .subtotal {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .quantity-control {
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        button {
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+
+        span {
+            min-width: 24px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}
