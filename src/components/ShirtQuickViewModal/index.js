@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./ShirtQuickViewModal.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +8,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 const cx = classNames.bind(styles);
 
 function ShirtQuickViewModal({ isOpen, onClose, product }) {
+  const { clubId } = useParams(); 
   const [selectedSize, setSelectedSize] = useState(null);
   const [count, setCount] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
@@ -18,10 +20,11 @@ function ShirtQuickViewModal({ isOpen, onClose, product }) {
     }
 
     const cartItem = {
+      idCloth: clubId, 
       name: product.shirtName,
-      price: parseInt(product.discountedPrice.replace(/\D/g, "")), // loại bỏ ký tự ₫
+      price: parseInt(product.discountedPrice.replace(/\D/g, "")),
       quantity: count,
-      image: product.image1,
+      image: product.image2,
     };
 
     fetch("http://localhost:3001/carts", {
@@ -110,13 +113,9 @@ function ShirtQuickViewModal({ isOpen, onClose, product }) {
 
             <div className={cx("action-buttons")}>
               <div className={cx("quantity-controls")}>
-                <button className={cx("quantity-btn")} onClick={handleDecrease}>
-                  -
-                </button>
+                <button className={cx("quantity-btn")} onClick={handleDecrease}>-</button>
                 <span className={cx("quantity")}>{count}</span>
-                <button className={cx("quantity-btn")} onClick={handleIncrease}>
-                  +
-                </button>
+                <button className={cx("quantity-btn")} onClick={handleIncrease}>+</button>
               </div>
 
               <button className={cx("add-to-cart")} onClick={handleAddToCart}>

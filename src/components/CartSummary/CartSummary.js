@@ -160,7 +160,11 @@ function CartSummary({ total, cartItems, onClearCart }) {
             if (!clothList) return;
 
             const matchedShirt = clothList.find((shirt) => shirt.shirtName === shirtName);
+            console.log(matchedShirt);
+
             if (!matchedShirt) return;
+
+            
 
             const updatedStock = matchedShirt.stock - quantity;
             if (updatedStock < 0) {

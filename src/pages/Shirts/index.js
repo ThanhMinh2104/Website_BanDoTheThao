@@ -79,6 +79,7 @@ const handleAddToCart = (product, count) => {
                         image1={item.image1}
                         image2={item.image2}
                         onAddToCart={handleAddToCart}
+                        
                     />
                 ))}
             </div>
