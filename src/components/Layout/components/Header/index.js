@@ -42,7 +42,7 @@ function Header() {
     };
 
     const handleLogout = () => {
-        setCurrentUser(null); // Xóa currentUser khi logout
+        setCurrentUser(null);
         console.log("Logged out");
     };
 

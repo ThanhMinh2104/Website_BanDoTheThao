@@ -7,8 +7,6 @@ import { faCartShopping, faMagnifyingGlass, faUser } from "@fortawesome/free-sol
 import { useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
-import Header from "../components/Header";
-import NavLinks from "../DefaultLayout/NavLinks";
 
 const cx = classNames.bind(styles);
 

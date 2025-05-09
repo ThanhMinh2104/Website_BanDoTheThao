@@ -1,7 +1,8 @@
-
-
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import classNames from "classnames/bind";
+import styles from "./Shirts.module.scss";
+import ShirtItem from "~/components/Layout/components/ShirtItem";
 
 const cx = classNames.bind(styles);
 
@@ -36,7 +37,6 @@ function Shirts() {
         <div className={cx("wrapper")}>
             <div className={cx("grid")}>
                 {shirts.map((item) => (
-
                     <ShirtItem
                         key={item.id}
                         shirtName={item.shirtName}
