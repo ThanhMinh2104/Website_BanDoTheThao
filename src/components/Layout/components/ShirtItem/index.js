@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2 }) {
     const [isHovered, setIsHovered] = useState(false);
 
+    console.log("image:", image1);
     return (
         <div className={cx("wrapper")}>
             <div
