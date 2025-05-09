@@ -2,9 +2,6 @@ import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faCartShopping, faMagnifyingGlass, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
-
 import { faCartShopping, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
@@ -69,27 +66,6 @@ function Header() {
             {/* Navigation Bar */}
             <nav className={cx("nav-bar")}>
                 <ul className={cx("nav-list")}>
-                    <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
-                            ÁO BÓNG ĐÁ THÁI LAN
-                        </a>
-                    </li>
-                    <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
-                            ÁO ĐỘI TUYỂN
-                        </a>
-                    </li>
-                    <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
-                            ÁO BÓNG ĐÁ CLB
-                        </a>
-                    </li>
-                    <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
-                            ÁO BÓNG ĐÁ KHÔNG LOGO
-                        </a>
-                    </li>
-                    
                     <li  className={cx("nav-item")}>
                         <Link  to="/shirts/thailand" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ THÁI LAN
