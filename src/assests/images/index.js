@@ -170,6 +170,10 @@ const images = {
     psg4: require("~/assests/images/Shirt/psg/ao4.jpg"),
     psg5: require("~/assests/images/Shirt/psg/ao5.jpg"),
     psg6: require("~/assests/images/Shirt/psg/ao6.jpg"),
+
+    bocongthuong: require("~/assests/images/bocongthuong.jpg"),
+    payment: require("~/assests/images/payment.jpg"),
+
 };
 
 export default images;

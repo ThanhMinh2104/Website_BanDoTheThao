@@ -4,6 +4,7 @@ import Header from "~/components/Layout/components/Header";
 import Banner from "./Banner";
 import NavLinks from "./NavLinks";
 import ClubLogo from "./ClubLogo";
+import Footer from "../components/Footer";
 
 const cx = classNames.bind(styles);
 
@@ -17,6 +18,7 @@ function DefaultLayout({ children }) {
             <div className={cx("container")}>
                 <div className={cx("content")}>{children}</div>
             </div>
+            <Footer/>
         </div>
     );
 }
