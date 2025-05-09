@@ -2,16 +2,25 @@ import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { faCartShopping, faMagnifyingGlass, faSignOut, faUser } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
+import Tippy from "@tippyjs/react/headless";
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [showOverlay, setShowOverlay] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
+    const [currentUser, setCurrentUser] = useState(null);
+
+    // Hàm lấy tên cuối cùng
+    const getLastName = (fullName) => {
+        if (!fullName) return "";
+        const nameParts = fullName.trim().split(" ");
+        return nameParts[nameParts.length - 1];
+    };
 
     const cartItems = [
         { id: 1, name: "Man City sân khách màu ba 24/25 hàng Thái Lan", quantity: 1 },
@@ -28,6 +37,15 @@ function Header() {
         console.log("Checkout clicked");
     };
 
+    const handleSuccess = (user) => {
+        setCurrentUser(user);
+    };
+
+    const handleLogout = () => {
+        setCurrentUser(null); // Xóa currentUser khi logout
+        console.log("Logged out");
+    };
+
     return (
         <header className={cx("wrapper")}>
             <div className={cx("inner")}>
@@ -41,11 +59,32 @@ function Header() {
                         icon={faMagnifyingGlass}
                         onClick={() => setShowOverlay(true)}
                     />
-                    <FontAwesomeIcon
-                        className={cx("action-icon")}
-                        icon={faUser}
-                        onClick={() => setShowLoginModal(true)}
-                    />
+                    <Tippy
+                        placement="bottom"
+                        interactive
+                        trigger="mouseenter"
+                        render={(attrs) =>
+                            currentUser ? (
+                                <div className={cx("logout-tippy")} tabIndex="-1" {...attrs}>
+                                    <div className={cx("logout-content")}>
+                                        <button className={cx("logout-button")} onClick={handleLogout}>
+                                            Logout
+                                        </button>
+                                        <FontAwesomeIcon icon={faSignOut} />
+                                    </div>
+                                </div>
+                            ) : null
+                        }
+                    >
+                        <div className={cx("user-wrapper")}>
+                            <FontAwesomeIcon
+                                className={cx("action-icon", currentUser ? "user" : undefined)}
+                                icon={faUser}
+                                onClick={() => !currentUser && setShowLoginModal(true)}
+                            />
+                            {currentUser && <span>{getLastName(currentUser.fullName)}</span>}
+                        </div>
+                    </Tippy>
                     <CartPopup
                         cartItems={cartItems}
                         total={total}
@@ -59,7 +98,6 @@ function Header() {
                 </div>
             </div>
 
-            {/* Navigation Bar */}
             <nav className={cx("nav-bar")}>
                 <ul className={cx("nav-list")}>
                     <li className={cx("nav-item")}>
@@ -100,7 +138,6 @@ function Header() {
                 </ul>
             </nav>
 
-            {/* Overlay và nội dung */}
             {showOverlay && (
                 <>
                     <div className={cx("overlay")} onClick={() => setShowOverlay(false)}></div>
@@ -113,8 +150,11 @@ function Header() {
                 </>
             )}
 
-            {/* Modal Login & Logout */}
-            <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
+            <LoginModal
+                isOpen={currentUser ? undefined : showLoginModal}
+                onClose={() => setShowLoginModal(false)}
+                onSuccess={handleSuccess}
+            />
         </header>
     );
 }

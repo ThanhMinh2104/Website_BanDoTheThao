@@ -1,10 +1,31 @@
 {
-    "users": [
-        { "id": 1, "name": "John Doe" },
-        { "id": 2, "name": "Jane Doe" }
-    ],
-    "posts": [
-        { "id": 1, "title": "Post 1" },
-        { "id": 2, "title": "Post 2" }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Nguyen Ho Thanh Minh",
+      "emailAddress": "nguyenlainwe@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "1746768554013",
+      "fullName": "Thanh Y",
+      "email": "ynguyen123@gmail.com",
+      "password": "123456",
+      "username": "ynguyen123@gmail.com"
+    },
+    {
+      "id": 1746770799018,
+      "fullName": "Nguyen Ho Thanh Minh",
+      "email": "thanhmeno@gamil.com",
+      "password": "123456",
+      "username": "thanhmeno@gamil.com"
+    },
+    {
+      "id": 1746771435261,
+      "fullName": "Thanh Nhan",
+      "email": "nhan@gmail.com",
+      "password": "123456",
+      "username": "nhan@gmail.com"
+    }
+  ]
 }

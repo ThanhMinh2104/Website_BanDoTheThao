@@ -50,6 +50,11 @@
     }
 }
 
+.action-icon.user,
+.action-icon.user + span {
+    color: var(--primary--color);
+}
+
 .cart-icon {
     width: 25px;
     height: 20px;
@@ -63,7 +68,7 @@
 // Tim kiem
 .search-wrapper {
     position: absolute;
-    top: 350%;
+    top: 260%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
@@ -135,4 +140,38 @@
     &:hover {
         color: var(--primary--color);
     }
+}
+
+// Logtout Tippt
+.logout-tippy {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 4px 8px;
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+.user-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-content:hover,
+.logout-button:hover {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary--color);
 }
