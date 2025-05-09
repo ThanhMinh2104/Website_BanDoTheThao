@@ -41,7 +41,7 @@ function ClubLogo() {
 
       <div className={cx("grid")}>
         {clubs.map((club) => (
-          <Link to= {`/shirts/${club.id}`}
+          <Link to= {`/${club.id}`}
             key={club.id}
             className={cx("item", { hover: hoverClub === club.id })}
             onMouseEnter={() => setHoverClub(club.id)}

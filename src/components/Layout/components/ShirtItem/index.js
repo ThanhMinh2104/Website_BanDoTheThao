@@ -3,13 +3,34 @@ import classNames from "classnames/bind";
 import styles from "./ShirtItem.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import ShirtQuickViewModal from "~/components/ShirtQuickViewModal";
 
 const cx = classNames.bind(styles);
 
-function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2 }) {
+function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2, id, stock, price, onAddToCart }) {
     const [isHovered, setIsHovered] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    console.log("image:", image1);
+    const shirtData = {
+        shirtName,
+        originalPrice,
+        discountedPrice,
+        image1,
+        image2,
+        stock,
+        price
+    }
+
+    const openModal = () => {
+        setIsModalOpen(true);
+        document.body.style.overflow = "hidden"; 
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        document.body.style.overflow = "auto"; 
+    }
+
     return (
         <div className={cx("wrapper")}>
             <div
@@ -37,10 +58,18 @@ function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2 }
                 </div>
 
                 <div className={cx("btn-cart-view")}>
-                    <button className={cx("quick-view-btn")}>Quick View</button>
+                    <button className={cx("quick-view-btn")} onClick={openModal}>Quick View</button>
                     <FontAwesomeIcon icon = {faShoppingCart} className={cx("add-to-cart-icon")} />
                 </div>
             </div>
+
+            <ShirtQuickViewModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                product={shirtData}
+                onAddToCart={onAddToCart}
+
+            />
         </div>
     );
 }

@@ -16,19 +16,19 @@ function Banner() {
                             </h2>
                         </div>
                         <div className={cx("button-container")}>
-                            <Link to = "/shirts/clb"    >
+                            <Link to = "/clb"    >
                                 <button className={cx("banner-button")}>
                                     CÂU LẠC BỘ 24/25
                                 </button>
                             </Link>
                             
-                            <Link to = "/shirts/doituyen"    >
+                            <Link to = "/doituyen"    >
                                 <button className={cx("banner-button")}>
                                     ĐỘI TUYỂN QUỐC GIA 2025
                                 </button>
                             </Link>
 
-                            <Link to = "/shirts/aokhonglogo"    >
+                            <Link to = "/aokhonglogo"    >
                                 <button className={cx("banner-button")}>
                                     BÓNG ĐÁ KHÔNG LOGO
                                 </button>

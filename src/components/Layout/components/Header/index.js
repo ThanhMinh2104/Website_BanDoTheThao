@@ -105,22 +105,22 @@ function Header() {
             <nav className={cx("nav-bar")}>
                 <ul className={cx("nav-list")}>
                     <li className={cx("nav-item")}>
-                        <Link to="/shirts/thailand" className={cx("nav-link")}>
+                        <Link to="/thailand" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ THÁI LAN
                         </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <Link to="/shirts/doituyen" className={cx("nav-link")}>
+                        <Link to="/doituyen" className={cx("nav-link")}>
                             ÁO ĐỘI TUYỂN
                         </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <Link to="/shirts/clb" className={cx("nav-link")}>
+                        <Link to="/clb" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ CLB
                         </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <Link to="/shirts/aokhonglogo" className={cx("nav-link")}>
+                        <Link to="/aokhonglogo" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ KHÔNG LOGO
                         </Link>
                     </li>
