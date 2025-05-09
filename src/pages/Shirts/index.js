@@ -5,7 +5,6 @@ import styles from "./Shirts.module.scss";
 import ShirtItem from "~/components/Layout/components/ShirtItem";
 import AddShirtItem from "~/components/AddShirtItem";
 
-
 const cx = classNames.bind(styles);
 
 function Shirts() {
@@ -17,8 +16,6 @@ function Shirts() {
     const toggleAdminMode = () => {
         setIsAdminMode(!isAdminMode);
     };
-
-    
 
     const handleAddToCart = (product, count) => {
         setCart((prevCart) => {
@@ -74,17 +71,14 @@ function Shirts() {
     }, [clubId]);
 
     const handleShirtAdded = (newShirt) => {
-    // Add the new shirt to the state
-    setShirts(prevShirts => [...prevShirts, newShirt]);
-};
+        // Add the new shirt to the state
+        setShirts((prevShirts) => [...prevShirts, newShirt]);
+    };
 
     return (
         <div className={cx("wrapper")}>
             <div className={cx("admin-toggle")}>
-                <button 
-                    className={cx("admin-toggle-btn", { active: isAdminMode })}
-                    onClick={toggleAdminMode}
-                >
+                <button className={cx("admin-toggle-btn", { active: isAdminMode })} onClick={toggleAdminMode}>
                     {isAdminMode ? "Customer Mode" : "Admin Mode"}
                 </button>
             </div>
