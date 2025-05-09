@@ -20,10 +20,6 @@ const publicRoutes = [
         component: NewsDetail,
     },
     {
-        path: "/shirts",
-        component: Shirts,
-    },
-    {
         path: "/sport",
         component: Sport,
     },
@@ -33,7 +29,7 @@ const publicRoutes = [
         layout: HeaderOnly,
     },
     { path: "/", component: ClubLogo },
-    { path: "/shirts/:clubId", component: Shirts },
+    { path: "/:clubId", component: Shirts },
 ];
 
 export { publicRoutes };
