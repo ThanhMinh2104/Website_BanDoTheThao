@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Shirts.module.scss";
 import ShirtItem from "~/components/Layout/components/ShirtItem";
+import AddShirtItem from "~/components/AddShirtItem";
+
 
 const cx = classNames.bind(styles);
 
@@ -10,6 +12,13 @@ function Shirts() {
     const { clubId } = useParams();
     const [shirts, setShirts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [isAdminMode, setIsAdminMode] = useState(false);
+
+    const toggleAdminMode = () => {
+        setIsAdminMode(!isAdminMode);
+    };
+
+    
 
     const handleAddToCart = (product, count) => {
         setCart((prevCart) => {
@@ -64,8 +73,22 @@ function Shirts() {
             });
     }, [clubId]);
 
+    const handleShirtAdded = (newShirt) => {
+    // Add the new shirt to the state
+    setShirts(prevShirts => [...prevShirts, newShirt]);
+};
+
     return (
         <div className={cx("wrapper")}>
+            <div className={cx("admin-toggle")}>
+                <button 
+                    className={cx("admin-toggle-btn", { active: isAdminMode })}
+                    onClick={toggleAdminMode}
+                >
+                    {isAdminMode ? "Customer Mode" : "Admin Mode"}
+                </button>
+            </div>
+
             <div className={cx("grid")}>
                 {shirts.map((item) => (
                     <ShirtItem
@@ -76,8 +99,11 @@ function Shirts() {
                         image1={item.image1}
                         image2={item.image2}
                         onAddToCart={handleAddToCart}
+                        isAdminMode={isAdminMode}
                     />
                 ))}
+                {/* Add new shirt card - only visible in admin mode */}
+                {isAdminMode && <AddShirtItem clubId={clubId} onShirtAdded={handleShirtAdded} />}
             </div>
         </div>
     );

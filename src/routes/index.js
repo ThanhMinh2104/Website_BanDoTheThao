@@ -30,6 +30,6 @@ const publicRoutes = [
     },
     { path: "/", component: ClubLogo },
     { path: "/:clubId", component: Shirts },
-];
+ ];
 
 export { publicRoutes };

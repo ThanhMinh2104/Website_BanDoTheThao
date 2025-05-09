@@ -31,6 +31,35 @@ function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2, 
         document.body.style.overflow = "auto"; 
     }
 
+    const handleQuickAddToCart = (e) => {
+  e.stopPropagation(); 
+  
+  const cartItem = {
+    idCloth: window.location.pathname.split('/').pop(), // Extract clubId from URL
+    name: shirtName,
+    price: parseInt(discountedPrice.replace(/\D/g, "")),
+    quantity: 1, 
+    image: image2,
+    size: "M"
+  };
+  
+  fetch("http://localhost:3001/carts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(cartItem),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Lỗi khi thêm vào giỏ hàng");
+      alert("Đã thêm vào giỏ hàng!"); // Success message
+    })
+    .catch((err) => {
+      console.error("Lỗi thêm giỏ hàng:", err);
+      alert("Thêm vào giỏ hàng thất bại!"); // Error message
+    });
+};
+
     return (
         <div className={cx("wrapper")}>
             <div
@@ -59,7 +88,11 @@ function ShirtItem({ shirtName, originalPrice, discountedPrice, image1, image2, 
 
                 <div className={cx("btn-cart-view")}>
                     <button className={cx("quick-view-btn")} onClick={openModal}>Quick View</button>
-                    <FontAwesomeIcon icon = {faShoppingCart} className={cx("add-to-cart-icon")} />
+                    <FontAwesomeIcon 
+                        icon={faShoppingCart} 
+                        className={cx("add-to-cart-icon")} 
+                        onClick={handleQuickAddToCart}
+                    />
                 </div>
             </div>
 
