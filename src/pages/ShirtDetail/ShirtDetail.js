@@ -8,7 +8,7 @@ import images from "~/assests/images";
 
 const cx = classNames.bind(styles);
 
-function ShirtDetail() {
+function ShirtDetail({ shirtName, image1, image2 }) {
     const [selectedSize, setSelectedSize] = useState(null);
     const [count, setCount] = useState(1);
 

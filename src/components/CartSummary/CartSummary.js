@@ -154,21 +154,19 @@ function CartSummary({ total, cartItems, onClearCart }) {
         };
 
         const updatePromises = cartItems.map(async (cartItem) => {
-            const { idCloth, shirtName, quantity } = cartItem;
+            const { idCloth, name, quantity } = cartItem;
+            console.log(cartItem);
 
             const clothList = allShirtsData[idCloth?.toLowerCase()];
             if (!clothList) return;
 
-            const matchedShirt = clothList.find((shirt) => shirt.shirtName === shirtName);
-            console.log(matchedShirt);
+            const matchedShirt = clothList.find((shirt) => shirt.shirtName === name);
 
             if (!matchedShirt) return;
 
-            
-
             const updatedStock = matchedShirt.stock - quantity;
             if (updatedStock < 0) {
-                console.warn(`Không đủ hàng cho: ${shirtName}`);
+                console.warn(`Không đủ hàng cho: ${name}`);
                 return;
             }
 
@@ -182,10 +180,10 @@ function CartSummary({ total, cartItems, onClearCart }) {
                 });
 
                 if (!response.ok) {
-                    console.error(`Cập nhật thất bại cho: ${shirtName}`);
+                    console.error(`Cập nhật thất bại cho: ${name}`);
                 }
             } catch (error) {
-                console.error(`Lỗi khi cập nhật ${shirtName}:`, error);
+                console.error(`Lỗi khi cập nhật ${name}:`, error);
             }
         });
 

@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faMagnifyingGlass, faSignOut, faUser } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,6 +16,7 @@ function Header() {
     const [showOverlay, setShowOverlay] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [currentUser, setCurrentUser] = useState(null);
+    const [cartItems, setCartItems] = useState();
 
     const getLastName = (fullName) => {
         if (!fullName) return "";
@@ -23,11 +24,12 @@ function Header() {
         return nameParts[nameParts.length - 1];
     };
 
-    const cartItems = [
-        { id: 1, name: "Man City sân khách màu ba 24/25 hàng Thái Lan", quantity: 1 },
-        { id: 2, name: "Man City sân khách 24/25 hàng Thái Lan", quantity: 1 },
-        { id: 3, name: "Quần áo Manchester City", quantity: 1 },
-    ];
+    useEffect(() => {
+        fetch("http://localhost:3001/carts")
+            .then((res) => res.json())
+            .then((data) => setCartItems(data));
+    }, [cartItems]);
+
     const total = "1,140,000đ";
 
     const navigate = useNavigate();
@@ -89,6 +91,7 @@ function Header() {
                     </Tippy>
 
                     <CartPopup
+                        setItems={setCartItems}
                         cartItems={cartItems}
                         total={total}
                         onViewCart={handleViewCart}
