@@ -10,6 +10,15 @@ const cx = classNames.bind(styles);
 
 function Cart() {
     const [selectedSize, setSelectedSize] = useState(null);
+    const [count, setCount] = useState(1);
+
+    const handleIncrease = () => {
+        setCount((pre) => pre + 1);
+    };
+
+    const handleDecrease = () => {
+        setCount((pre) => (pre > 1 ? pre - 1 : 1));
+    };
 
     const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
 
@@ -116,6 +125,15 @@ function Cart() {
                         <button className={cx("quantity-btn")}>-</button>
                         <span className={cx("quantity")}>1</span>
                         <button className={cx("quantity-btn")}>+</button>
+
+                        <button className={cx("quantity-btn")} onClick={handleDecrease}>
+                            -
+                        </button>
+                        <span className={cx("quantity")}>{count}</span>
+                        <button className={cx("quantity-btn")} onClick={handleIncrease}>
+                            +
+                        </button>
+
                         <button className={cx("add-to-cart")}>ADD TO CART</button>
                     </div>
 
