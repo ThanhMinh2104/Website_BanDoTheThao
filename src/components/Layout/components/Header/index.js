@@ -2,10 +2,16 @@ import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faCartShopping, faMagnifyingGlass, faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
+
 import { faCartShopping, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
+
+import { Link } from "react-router-dom";
+
 
 const cx = classNames.bind(styles);
 
@@ -59,6 +65,7 @@ function Header() {
                 </div>
             </div>
 
+
             {/* Navigation Bar */}
             <nav className={cx("nav-bar")}>
                 <ul className={cx("nav-list")}>
@@ -81,6 +88,28 @@ function Header() {
                         <a href="#" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ KHÔNG LOGO
                         </a>
+                    </li>
+                    
+                    <li  className={cx("nav-item")}>
+                        <Link  to="/shirts/thailand" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ THÁI LAN
+                        </Link>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <Link  to="/shirts/doituyen" className={cx("nav-link")}>
+                            ÁO ĐỘI TUYỂN
+                        </Link>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <Link  to="/shirts/clb" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ CLB
+                        </Link>
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <Link  to="/shirts/aokhonglogo" className={cx("nav-link")}>
+                            ÁO BÓNG ĐÁ KHÔNG LOGO
+                        </Link>
+
                     </li>
                     <li className={cx("nav-item")}>
                         <a href="#" className={cx("nav-link")}>

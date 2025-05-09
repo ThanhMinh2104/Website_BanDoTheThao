@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Banner.module.scss";
 import classNames from "classnames/bind";
 
@@ -15,9 +16,23 @@ function Banner() {
                             </h2>
                         </div>
                         <div className={cx("button-container")}>
-                            <button className={cx("banner-button")}>CÂU LẠC BỘ 25/26</button>
-                            <button className={cx("banner-button")}>ĐỘI TUYỂN QUỐC GIA 2025</button>
-                            <button className={cx("banner-button")}>BÓNG ĐÁ KHÔNG LOGO</button>
+                            <Link to = "/shirts/clb"    >
+                                <button className={cx("banner-button")}>
+                                    CÂU LẠC BỘ 24/25
+                                </button>
+                            </Link>
+                            
+                            <Link to = "/shirts/doituyen"    >
+                                <button className={cx("banner-button")}>
+                                    ĐỘI TUYỂN QUỐC GIA 2025
+                                </button>
+                            </Link>
+
+                            <Link to = "/shirts/aokhonglogo"    >
+                                <button className={cx("banner-button")}>
+                                    BÓNG ĐÁ KHÔNG LOGO
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
