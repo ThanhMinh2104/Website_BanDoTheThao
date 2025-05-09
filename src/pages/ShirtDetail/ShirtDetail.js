@@ -122,10 +122,6 @@ function ShirtDetail() {
 
                     {/* Add to Cart Button */}
                     <div className={cx("action-buttons")}>
-                        <button className={cx("quantity-btn")}>-</button>
-                        <span className={cx("quantity")}>1</span>
-                        <button className={cx("quantity-btn")}>+</button>
-
                         <button className={cx("quantity-btn")} onClick={handleDecrease}>
                             -
                         </button>

@@ -7,6 +7,9 @@ import { faCartShopping, faMagnifyingGlass, faUser } from "@fortawesome/free-sol
 import { useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
+import Header from "../components/Header";
+import NavLinks from "../DefaultLayout/NavLinks";
+import Footer from "../components/Footer";
 
 const cx = classNames.bind(styles);
 
@@ -31,95 +34,9 @@ function HeaderOnly({ children }) {
 
     return (
         <>
-            <header className={cx("wrapper")}>
-                <div className={cx("inner")}>
-                    <div></div>
-                    <div className={cx("logo")}>
-                        <img className={cx("logo-image")} src={images.logo} alt="logo" />
-                    </div>
-                    <div className={cx("actions")}>
-                        <FontAwesomeIcon
-                            className={cx("action-icon")}
-                            icon={faMagnifyingGlass}
-                            onClick={() => setShowOverlay(true)}
-                        />
-                        <FontAwesomeIcon
-                            className={cx("action-icon")}
-                            icon={faUser}
-                            onClick={() => setShowLoginModal(true)}
-                        />
-                        <CartPopup
-                            cartItems={cartItems}
-                            total={total}
-                            onViewCart={handleViewCart}
-                            onCheckout={handleCheckout}
-                        >
-                            <div className={cx("cart")}>
-                                <FontAwesomeIcon className={cx("cart-icon")} icon={faCartShopping} />
-                            </div>
-                        </CartPopup>
-                    </div>
-                </div>
-
-                {/* Navigation Bar */}
-                <nav className={cx("nav-bar")}>
-                    <ul className={cx("nav-list")}>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                ÁO BÓNG ĐÁ THÁI LAN
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                ÁO ĐỘI TUYỂN
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                ÁO BÓNG ĐÁ CLB
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                ÁO BÓNG ĐÁ KHÔNG LOGO
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                BÓNG ĐÁ
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                GYM
-                            </a>
-                        </li>
-                        <li className={cx("nav-item")}>
-                            <a href="#" className={cx("nav-link")}>
-                                YOGA
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                {/* Overlay và nội dung */}
-                {showOverlay && (
-                    <>
-                        <div className={cx("overlay")} onClick={() => setShowOverlay(false)}></div>
-                        <div className={cx("search-wrapper")}>
-                            <input type="text" className={cx("search-input")} placeholder="Tìm kiếm sản phẩm..." />
-                            <i className={cx("search-icon")}>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} onClick={() => {}} />
-                            </i>
-                        </div>
-                    </>
-                )}
-
-                {/* Modal Login & Logout */}
-                <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
-            </header>
-
+            <Header />
             <div>{children}</div>
+            <Footer />
         </>
     );
 }
