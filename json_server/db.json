@@ -1,0 +1,12 @@
+{
+    "shirtsData": [
+        {
+            "id": "mc1",
+            "shirtName": "Quần áo Manchester City xanh sân nhà 24/25 hàng Thái Lan",
+            "originalPrice": "330.000đ",
+            "discountedPrice": "280.000đ",
+            "image1": "images.mancity1",
+            "image2": "images.mancity2"
+        }
+    ]
+}
