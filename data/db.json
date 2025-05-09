@@ -1,0 +1,642 @@
+{
+    "users": [
+        { "id": 1, "name": "John Doe" },
+        { "id": 2, "name": "Jane Doe" }
+    ],
+    "posts": [
+        { "id": 1, "title": "Post 1" },
+        { "id": 2, "title": "Post 2" }
+    ],
+
+  "shirts": {
+    "mancity": [
+      {
+        "id": "mc1",
+        "shirtName": "Quần áo Manchester City xanh sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao1.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao2.jpg"
+      },
+      {
+        "id": "mc2",
+        "shirtName": "Quần áo Manchester City xanh sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao3.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao4.jpg"
+      },
+      {
+        "id": "mc3",
+        "shirtName": "Quần áo Manchester City xanh sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao6.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao5.jpg"
+      },
+      {
+        "id": "mc4",
+        "shirtName": "Quần áo Manchester City xanh sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao8.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao7.jpg"
+      },
+      {
+        "id": "mc5",
+        "shirtName": "Quần áo Manchester City đỏ sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao10.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao9.jpg"
+      },
+      {
+        "id": "mc6",
+        "shirtName": "Quần áo Manchester City đỏ sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/mancity/ao12.jpg",
+        "image2": "/assests/images/Shirt/mancity/ao11.jpg"
+      }
+    ],
+    "arsenal": [
+      {
+        "id": "ar1",
+        "shirtName": "Quần áo Arsenal đỏ sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao2.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao1.jpg"
+      },
+      {
+        "id": "ar2",
+        "shirtName": "Quần áo Arsenal xanh đen sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao4.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao3.jpg"
+      },
+      {
+        "id": "ar3",
+        "shirtName": "Quần áo Arsenal xanh sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao6.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao5.jpg"
+      },
+      {
+        "id": "ar4",
+        "shirtName": "Quần áo Arsenal đỏ sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao8.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao7.jpg"
+      },
+      {
+        "id": "ar5",
+        "shirtName": "Quần áo Arsenal đen sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao10.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao9.jpg"
+      },
+      {
+        "id": "ar6",
+        "shirtName": "Quần áo Arsenal đỏ sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/arsenal/ao12.jpg",
+        "image2": "/assests/images/Shirt/arsenal/ao11.jpg"
+      }
+    ],
+    "chelsea": [
+      {
+        "id": "ch1",
+        "shirtName": "Quần áo Chelsea xanh sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao2.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao1.jpg"
+      },
+      {
+        "id": "ch2",
+        "shirtName": "Quần áo Chelsea be sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao4.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao3.jpg"
+      },
+      {
+        "id": "ch3",
+        "shirtName": "Quần áo Chelsea xanh sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao6.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao5.jpg"
+      },
+      {
+        "id": "ch4",
+        "shirtName": "Quần áo Chelsea xanh sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao8.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao7.jpg"
+      },
+      {
+        "id": "ch5",
+        "shirtName": "Quần áo Chelsea be sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao10.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao9.jpg"
+      },
+      {
+        "id": "ch6",
+        "shirtName": "Quần áo Chelsea đen sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/chelsea/ao12.jpg",
+        "image2": "/assests/images/Shirt/chelsea/ao11.jpg"
+      }
+    ],
+    "liverpool": [
+      {
+        "id": "li1",
+        "shirtName": "Quần áo Liverpool sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao2.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao1.jpg"
+      },
+      {
+        "id": "li2",
+        "shirtName": "Quần áo Liverpool sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao4.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao3.jpg"
+      },
+      {
+        "id": "li3",
+        "shirtName": "Quần áo Liverpool sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao6.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao5.jpg"
+      },
+      {
+        "id": "li4",
+        "shirtName": "Quần áo Liverpool sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao8.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao7.jpg"
+      },
+      {
+        "id": "li5",
+        "shirtName": "Quần áo Liverpool sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao10.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao9.jpg"
+      },
+      {
+        "id": "li6",
+        "shirtName": "Quần áo Liverpool sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/liverpool/ao12.jpg",
+        "image2": "/assests/images/Shirt/liverpool/ao11.jpg"
+      }
+    ],
+    "manutd": [
+      {
+        "id": "mu1",
+        "shirtName": "Quần áo Manchester United sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao2.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao1.jpg"
+      },
+      {
+        "id": "mu2",
+        "shirtName": "Quần áo Manchester United sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao4.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao3.jpg"
+      },
+      {
+        "id": "mu3",
+        "shirtName": "Quần áo Manchester United sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao6.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao5.jpg"
+      },
+      {
+        "id": "mu4",
+        "shirtName": "Quần áo Manchester United sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao8.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao7.jpg"
+      },
+      {
+        "id": "mu5",
+        "shirtName": "Quần áo Manchester United sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao10.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao9.jpg"
+      },
+      {
+        "id": "mu6",
+        "shirtName": "Quần áo Manchester United sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/manutd/ao12.jpg",
+        "image2": "/assests/images/Shirt/manutd/ao11.jpg"
+      }
+    ],
+    "atletico": [
+      {
+        "id": "at1",
+        "shirtName": "Quần áo Atletico Madrid sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao1.png",
+        "image2": "/assests/images/Shirt/atletico/ao1.png"
+      },
+      {
+        "id": "at2",
+        "shirtName": "Quần áo Atletico Madrid sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao1.png",
+        "image2": "/assests/images/Shirt/atletico/ao1.png"
+      },
+      {
+        "id": "at3",
+        "shirtName": "Quần áo Atletico Madrid sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      }
+    ],
+    "barcelona": [
+      {
+        "id": "ba1",
+        "shirtName": "Quần áo Barcelona sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/barcelona/ao2.jpg",
+        "image2": "/assests/images/Shirt/barcelona/ao1.jpg"
+      },
+      {
+        "id": "ba2",
+        "shirtName": "Quần áo Barcelona sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/barcelona/ao4.jpg",
+        "image2": "/assests/images/Shirt/barcelona/ao3.jpg"
+      },
+      {
+        "id": "ba3",
+        "shirtName": "Quần áo Barcelona sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/barcelona/ao6.jpg",
+        "image2": "/assests/images/Shirt/barcelona/ao5.jpg"
+      },
+      {
+        "id": "ba4",
+        "shirtName": "Quần áo Barcelona sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/barcelona/ao8.jpg",
+        "image2": "/assests/images/Shirt/barcelona/ao7.jpg"
+      },
+      {
+        "id": "ba5",
+        "shirtName": "Quần áo Barcelona sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      },
+      {
+        "id": "ba6",
+        "shirtName": "Quần áo Barcelona sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      }
+    ],
+    "realmadrid": [
+      {
+        "id": "re1",
+        "shirtName": "Quần áo Real Madrid sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao2.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao1.jpg"
+      },
+      {
+        "id": "re2",
+        "shirtName": "Quần áo Real Madrid sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao4.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao3.jpg"
+      },
+      {
+        "id": "re3",
+        "shirtName": "Quần áo Real Madrid sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao6.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao5.jpg"
+      },
+      {
+        "id": "re4",
+        "shirtName": "Quần áo Real Madrid sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao8.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao7.jpg"
+      },
+      {
+        "id": "re5",
+        "shirtName": "Quần áo Real Madrid sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao10.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao9.jpg"
+      },
+      {
+        "id": "re6",
+        "shirtName": "Quần áo Real Madrid sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/realmadrid/ao12.jpg",
+        "image2": "/assests/images/Shirt/realmadrid/ao11.jpg"
+      }
+    ],
+    "bayern": [
+      {
+        "id": "ba1",
+        "shirtName": "Quần áo Bayern Munich sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao2.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao1.jpg"
+      },
+      {
+        "id": "ba2",
+        "shirtName": "Quần áo Bayern Munich sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao4.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao3.jpg"
+      },
+      {
+        "id": "ba3",
+        "shirtName": "Quần áo Bayern Munich sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao6.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao5.jpg"
+      },
+      {
+        "id": "ba4",
+        "shirtName": "Quần áo Bayern Munich sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao8.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao7.jpg"
+      },
+      {
+        "id": "ba5",
+        "shirtName": "Quần áo Bayern Munich sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao10.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao9.jpg"
+      },
+      {
+        "id": "ba6",
+        "shirtName": "Quần áo Bayern Munich sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/bayern/ao12.jpg",
+        "image2": "/assests/images/Shirt/bayern/ao11.jpg"
+      }
+    ],
+    "dortmund": [
+      {
+        "id": "do1",
+        "shirtName": "Quần áo Dortmund sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/dortmund/ao2.jpg",
+        "image2": "/assests/images/Shirt/dortmund/ao1.jpg"
+      },
+      {
+        "id": "do2",
+        "shirtName": "Quần áo Dortmund sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/dortmund/ao4.jpg",
+        "image2": "/assests/images/Shirt/dortmund/ao3.jpg"
+      },
+      {
+        "id": "do3",
+        "shirtName": "Quần áo Dortmund sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/dortmund/ao6.jpg",
+        "image2": "/assests/images/Shirt/dortmund/ao5.jpg"
+      },
+      {
+        "id": "do4",
+        "shirtName": "Quần áo Dortmund sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/dortmund/ao8.jpg",
+        "image2": "/assests/images/Shirt/dortmund/ao7.jpg"
+      },
+      {
+        "id": "do5",
+        "shirtName": "Quần áo Dortmund sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      },
+      {
+        "id": "do6",
+        "shirtName": "Quần áo Dortmund sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      }
+    ],
+    "milan": [
+      {
+        "id": "mi1",
+        "shirtName": "Quần áo ACMilan sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/milan/ao2.jpg",
+        "image2": "/assests/images/Shirt/milan/ao1.jpg"
+      },
+      {
+        "id": "mi2",
+        "shirtName": "Quần áo ACMilan sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/milan/ao4.jpg",
+        "image2": "/assests/images/Shirt/milan/ao3.jpg"
+      },
+      {
+        "id": "mi3",
+        "shirtName": "Quần áo ACMilan sân khách mẫu 3 24/25 hàng Thái Lan",
+        "originalPrice": "320.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/milan/ao6.jpg",
+        "image2": "/assests/images/Shirt/milan/ao5.jpg"
+      },
+      {
+        "id": "mi4",
+        "shirtName": "Quần áo ACMilan sân nhà 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/milan/ao8.jpg",
+        "image2": "/assests/images/Shirt/milan/ao7.jpg"
+      },
+      {
+        "id": "mi5",
+        "shirtName": "Quần áo ACMilan sân khách 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/milan/ao10.jpg",
+        "image2": "/assests/images/Shirt/milan/ao9.jpg"
+      },
+      {
+        "id": "mi6",
+        "shirtName": "Quần áo ACMilan sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      }
+    ],
+    "roma": [
+      {
+        "id": "ro1",
+        "shirtName": "Quần áo ASRoma sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/roma/ao2.jpg",
+        "image2": "/assests/images/Shirt/roma/ao1.jpg"
+      },
+      {
+        "id": "ro2",
+        "shirtName": "Quần áo ASRoma sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/roma/ao4.jpg",
+        "image2": "/assests/images/Shirt/roma/ao3.jpg"
+      },
+      {
+        "id": "ro3",
+        "shirtName": "Quần áo ASRoma sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/atletico/ao2.jpg",
+        "image2": "/assests/images/Shirt/atletico/ao2.jpg"
+      }
+    ],
+    "inter": [
+      {
+        "id": "in1",
+        "shirtName": "Quần áo Inter Milan sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/intermilan/ao2.jpg",
+        "image2": "/assests/images/Shirt/intermilan/ao1.jpg"
+      },
+      {
+        "id": "in2",
+        "shirtName": "Quần áo Inter Milan sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/intermilan/ao4.jpg",
+        "image2": "/assests/images/Shirt/intermilan/ao3.jpg"
+      },
+      {
+        "id": "in3",
+        "shirtName": "Quần áo Inter Milan sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/intermilan/ao6.jpg",
+        "image2": "/assests/images/Shirt/intermilan/ao5.jpg"
+      }
+    ],
+    "juventus": [
+      {
+        "id": "ju1",
+        "shirtName": "Quần áo Juventus sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/juventus/ao2.jpg",
+        "image2": "/assests/images/Shirt/juventus/ao1.jpg"
+      },
+      {
+        "id": "ju2",
+        "shirtName": "Quần áo Juventus sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/juventus/ao4.jpg",
+        "image2": "/assests/images/Shirt/juventus/ao3.jpg"
+      },
+      {
+        "id": "ju3",
+        "shirtName": "Quần áo Juventus sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "discountedPrice": "100.000đ",
+        "image1": "/assests/images/Shirt/juventus/ao6.jpg",
+        "image2": "/assests/images/Shirt/juventus/ao5.jpg"
+      }
+    ],
+    "psg": [
+      {
+        "id": "psg1",
+        "shirtName": "Quần áo PSG sân nhà 24/25 hàng Thái Lan",
+        "originalPrice": "330.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/psg/ao2.jpg",
+        "image2": "/assests/images/Shirt/psg/ao1.jpg"
+      },
+      {
+        "id": "psg2",
+        "shirtName": "Quần áo PSG sân khách 24/25 hàng Thái Lan",
+        "originalPrice": "338.000đ",
+        "discountedPrice": "280.000đ",
+        "image1": "/assests/images/Shirt/psg/ao4.jpg",
+        "image2": "/assests/images/Shirt/psg/ao3.jpg"
+      },
+      {
+        "id": "psg3",
+        "shirtName": "Quần áo PSG sân khách mẫu 3 24/25",
+        "originalPrice": "139.000đ",
+        "image1": "/assests/images/Shirt/psg/ao6.jpg",
+        "image2": "/assests/images/Shirt/psg/ao5.jpg"
+      }
+    ]
+  }
+}
