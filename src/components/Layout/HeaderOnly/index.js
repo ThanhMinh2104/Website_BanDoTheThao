@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
 import Header from "~/components/Layout/components/Header";
-=======
 import classNames from "classnames/bind";
 import styles from "../components/Header/Header.module.scss";
 import images from "~/assests/images";
@@ -11,24 +9,17 @@ import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
 import Header from "../components/Header";
 import NavLinks from "../DefaultLayout/NavLinks";
+import Footer from "../components/Footer";
 
 const cx = classNames.bind(styles);
->>>>>>> Stashed changes
 
 function HeaderOnly({ children }) {
     return (
-<<<<<<< Updated upstream
-        <div>
-            <Header />
-            <div className="container">{children}</div>
-        </div>
-=======
         <>
-            <NavLinks />
             <Header />
             <div>{children}</div>
+            <Footer />
         </>
->>>>>>> Stashed changes
     );
 }
 

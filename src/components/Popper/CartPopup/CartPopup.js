@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import CartItem from "./CartItem";
 import Tippy from "@tippyjs/react/headless";
+import { useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -38,7 +39,7 @@ function CartPopup({ cartItems, total, onViewCart, onCheckout, children }) {
     };
 
     const cartTotal = total || "1,140,000đ";
-
+    const navigate = useNavigate();
     return (
         <Tippy
             placement="bottom-end"
@@ -47,7 +48,12 @@ function CartPopup({ cartItems, total, onViewCart, onCheckout, children }) {
                 <div className={cx("cart-popup")} tabIndex="-1" {...attrs}>
                     <div className={cx("cart-content")}>
                         {items.map((item) => (
-                            <CartItem key={item.id} item={item} onRemove={handleRemoveItem} />
+                            <CartItem
+                                key={item.id}
+                                item={item}
+                                onRemove={handleRemoveItem}
+                                onClick={() => navigate("/shirtdetail")}
+                            />
                         ))}
 
                         <div className={cx("subtotal")}>Subtotal: {cartTotal}</div>

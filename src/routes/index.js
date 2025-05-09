@@ -4,6 +4,8 @@ import NewsDetail from "~/pages/NewsDetail";
 import ShirtDetail from "~/pages/ShirtDetail";
 import Shirts from "~/pages/Shirts";
 import Sport from "~/pages/Sport";
+import ClubLogo from "~/components/Layout/DefaultLayout/ClubLogo";
+import ShirtDetail from "~/pages/ShirtDetail/ShirtDetail";
 const { default: Home } = require("~/pages/Home");
 
 const publicRoutes = [
@@ -28,6 +30,14 @@ const publicRoutes = [
         path: "/sport",
         component: Sport,
     },
+
+    {
+        path: "/shirtdetail",
+        component: ShirtDetail,
+        layout: HeaderOnly,
+    },
+    { path: "/", component: ClubLogo },
+    { path: "/shirts/:clubId", component: Shirts },
 ];
 
 export { publicRoutes };

@@ -3,9 +3,10 @@ import styles from "./Header.module.scss";
 import images from "~/assests/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faMagnifyingGlass, faSignOut, faUser } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LoginModal from "~/components/Form/LoginModal";
 import CartPopup from "~/components/Popper/CartPopup/CartPopup";
+import { Link, useNavigate } from "react-router-dom";
 import Tippy from "@tippyjs/react/headless";
 
 const cx = classNames.bind(styles);
@@ -15,7 +16,6 @@ function Header() {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [currentUser, setCurrentUser] = useState(null);
 
-    // Hàm lấy tên cuối cùng
     const getLastName = (fullName) => {
         if (!fullName) return "";
         const nameParts = fullName.trim().split(" ");
@@ -29,8 +29,9 @@ function Header() {
     ];
     const total = "1,140,000đ";
 
+    const navigate = useNavigate();
     const handleViewCart = () => {
-        console.log("View Cart clicked");
+        navigate("/cart");
     };
 
     const handleCheckout = () => {
@@ -42,7 +43,7 @@ function Header() {
     };
 
     const handleLogout = () => {
-        setCurrentUser(null); // Xóa currentUser khi logout
+        setCurrentUser(null);
         console.log("Logged out");
     };
 
@@ -85,6 +86,7 @@ function Header() {
                             {currentUser && <span>{getLastName(currentUser.fullName)}</span>}
                         </div>
                     </Tippy>
+
                     <CartPopup
                         cartItems={cartItems}
                         total={total}
@@ -98,42 +100,43 @@ function Header() {
                 </div>
             </div>
 
+            {/* Navigation Bar */}
             <nav className={cx("nav-bar")}>
                 <ul className={cx("nav-list")}>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/shirts/thailand" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ THÁI LAN
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/shirts/doituyen" className={cx("nav-link")}>
                             ÁO ĐỘI TUYỂN
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/shirts/clb" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ CLB
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/shirts/aokhonglogo" className={cx("nav-link")}>
                             ÁO BÓNG ĐÁ KHÔNG LOGO
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/products/bongda" className={cx("nav-link")}>
                             BÓNG ĐÁ
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/products/gym" className={cx("nav-link")}>
                             GYM
-                        </a>
+                        </Link>
                     </li>
                     <li className={cx("nav-item")}>
-                        <a href="#" className={cx("nav-link")}>
+                        <Link to="/products/yoga" className={cx("nav-link")}>
                             YOGA
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
@@ -144,14 +147,14 @@ function Header() {
                     <div className={cx("search-wrapper")}>
                         <input type="text" className={cx("search-input")} placeholder="Tìm kiếm sản phẩm..." />
                         <i className={cx("search-icon")}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} onClick={() => {}} />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </i>
                     </div>
                 </>
             )}
 
             <LoginModal
-                isOpen={currentUser ? undefined : showLoginModal}
+                isOpen={!currentUser && showLoginModal}
                 onClose={() => setShowLoginModal(false)}
                 onSuccess={handleSuccess}
             />
